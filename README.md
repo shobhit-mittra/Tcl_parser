@@ -15,4 +15,10 @@ The above insights are standard in order to understand the report.
 # Functional Partition of the project 
 This project consists of creation of a Shell Script (**tcsh** based script) that serves as the way for the user to communicate and interact with the main tcl script. It's close to a user-interface for the ease of operating the TCL script. Next is the development of the main TCL script that will take in the timing report through the shell script and dump out a timing summary report named : 'timing_rpt_summary.txt'. 
 
-[!NOTE]
+> [!IMPORTANT]
+> - Linux users can simply import the shell script and tcl script in their directory and execute the shell script via : <br/>
+> `./tcl_parser <full_path_to_timing_report>`
+> - Windows users need to avoid using the shell script and simply run the tcl script directly by providing the full path to the timing report. Make sure that tcl shell or `tclsh` is installed and functional in the windows power shell. Please visit the tcl websire to download the necessary dependencies. Run the tcl script via : 
+>  `tclsh tcl_parse <full_path_to_timing_report`
+
+#### This project is a segent of a task provided to me by my manager while working as a Physical Design Intern at 7Rays Semiconductors.
