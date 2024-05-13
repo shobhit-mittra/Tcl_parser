@@ -1,1 +1,1 @@
-This directory contains the versions (if any) of shell scripts made in the project
+This directory contains the versions (if any) of shell scripts made in the project. Kindly modify the version of the tcl script as per your requirement to in the shell script (Recommended : Use the latest version of the tcl script)
