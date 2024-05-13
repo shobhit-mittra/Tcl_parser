@@ -21,4 +21,6 @@ This project consists of creation of a Shell Script (**tcsh** based script) that
 > - Windows users need to avoid using the shell script and simply run the tcl script directly by providing the full path to the timing report. Make sure that tcl shell or `tclsh` is installed and functional in the windows power shell. Please visit the tcl websire to download the necessary dependencies. Run the tcl script via : 
 >  `tclsh tcl_parse <full_path_to_timing_report`
 
-#### This project is a segent of a task provided to me by my manager while working as a Physical Design Intern at 7Rays Semiconductors.
+> [!NOTE]
+> This project is a segment of a task provided to me by my manager while working as a Physical Design Intern at *7Rays Semiconductors*. <br/>
+> Hence, the timing report provided is sanitized to remove sensitive information. The report is modified to contain dummy information in order to protect the integrity of the proprietary information of the design and ensure compliance with the NDA.
