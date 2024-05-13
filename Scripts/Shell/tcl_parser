@@ -1,0 +1,54 @@
+#!/usr/bin/tcsh
+
+set version = "v1.1"
+echo "This is the script for TCL_Parser that facilitates the functionality of the main TCL script for the parser."
+echo ""
+
+
+# User does not provide any input file
+if ( $#argv != 1 ) then 
+
+	echo "No file found as an argument. Please provide the complete path including the name of the timing report required for analysis and extraction of key insights of the report."
+ 	echo ""
+	echo "Please type '-help' (without the single quotes) in order to understand the command."
+	echo ""
+	echo "Exiting....."
+	exit 1
+endif
+
+# User provides an incorrect path or file name or types -help
+if (! -e $argv[1] || $argv[1] == "-help") then
+	if ($argv != "-help") then
+		echo ""
+		echo "The path or the name of the file you have provided seems to be incorrect. Please recheck the file name and provide the complete path to the file and try again"
+		echo ""
+		echo "Exiting ......."
+		echo ""
+		exit 1
+
+	else	
+		echo "--------------------------------------Command Help Deck-------------------------------------------------"
+		echo "Note : The syntax and path are case-sensitive so kindly enter the essentials with care. "
+		echo ""
+		echo "USAGE : command syntax - 	./tcl_parser <timing_report_path>"
+		echo ""
+		echo " <timing_report_path> : Must contain the full path to the timing report"
+		echo ""
+		echo The TCL_Parser extracts the following information from the input timing report : 
+		echo "	1. Startpoint : The full path to the startpoint of the failing path "
+		echo "	2. Endpoint : The full path to the endpoint of the failing path "
+		echo "	3. Number of buffers and inverters present in the path "
+		echo "	4. The logic depth of the path : Number of logical components present in the path "
+		echo "	5. Data-Path delay : Arrival time "
+		echo "	6. Slack : Negative - Violations only "
+		echo ""
+		echo "Exiting...."		
+
+	endif
+else
+	echo ""
+	echo "Success ! Your file has been sourced to the TCL_Parser main script. The output summary file shall be dumped in the same working directory as the scripts with the name : timing_rpt_summary.txt"
+	tclsh "tcl_parse_$version.tcl" $argv[1]
+endif
+
+
