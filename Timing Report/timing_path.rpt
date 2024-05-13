@@ -1,0 +1,90 @@
+Warning: Scenario ff_****v_***c is not configured for setup analysis: skipping. (UIC-***)
+Warning: Scenario tt_***v***c is not configured for setup analysis: skipping. (UIC-***)
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 1
+        -report_by design
+Design : *****
+Version: *****
+Date   : ***** 2024
+****************************************
+Information: Timer using 'AWP, POCV, CRPR'. (TIM-***)
+
+  Startpoint: u_tile_main/xyz/abc/CP (rising edge-triggered flip-flop clocked by ***)
+  Endpoint: u_tile_secondary/123/456/u_spe (internal path endpoint)
+  Mode: func
+  Corner: ss_***_***c
+  Scenario: ss_***_***c
+  Path Group: ***_to_***
+  Path Type: max
+  Sigma:   3.00
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  u_tile_main/...../CP (SDF***VT)
+                                                   0.00      0.00 r
+  u_tile_main/...../Q (SDF***VT)
+                                                   0.03      0.03 r
+  u_tile_main/...../ZN (INV***VT)
+                                                   0.04      0.07 f
+  u_tile_main/...../ZN (INV***VT)
+                                                   0.03      0.09 r
+  u_tile_secondary/...../Z (BUFF***VT)
+                                                   0.07      0.16 r
+  u_tile_secondary/...../Z (MUX***VT)
+                                                   0.10      0.26 r
+  u_tile_secondary/...../ZN (MUX***VT)
+                                                   0.02      0.29 f
+  u_tile_secondary/...../ZN (INV***VT)
+                                                   0.01      0.29 r
+  u_tile_secondary/...../Z (AO***VT)
+                                                   0.03      0.32 r
+  u_tile_secondary/...../ZN (AOI***VT)
+                                                   0.01      0.33 f
+  u_tile_secondary/...../ZN (OAI***VT)
+                                                   0.01      0.34 r
+  u_tile_secondary/...../ZN (AOI***VT)
+                                                   0.01      0.34 f
+  u_tile_secondary/...../ZN (ND***VT)
+                                                   0.01      0.35 r
+  u_tile_secondary/...../Z (OR***VT)
+                                                   0.01      0.36 r
+  u_tile_secondary/...../ZN (AOAI***VT)
+                                                   0.01      0.37 f
+  u_tile_secondary/...../Z (AN3D4BWP16P90CPDULVT)
+                                                   0.01      0.39 f
+  u_tile_secondary/...../Z (BUFF***VT)
+                                                   0.01      0.40 f
+  u_tile_secondary/...../ZN (INV***VT)
+                                                   0.01      0.40 r
+  u_tile_secondary/...../Z (CK***VT)
+                                                   0.03      0.44 r
+  u_tile_secondary/...../Z (CK***VT)
+                                                   0.04      0.47 r
+  u_tile_secondary/...../Z (CK***VT)
+                                                   0.04      0.52 r
+  u_tile_secondary/...../ZN (INV***VT)
+                                                   0.02      0.54 f
+  u_tile_secondary/...../Z (BUFF***VT)
+                                                   0.02      0.56 f
+  u_tile_secondary/...../I (BUFF***VT) <-
+                                                   0.00      0.56 f
+  u_tile_secondary/...../Z (BUFF***VT)
+                                                   0.01      0.57 f
+  u_tile_secondary/...../exe_uinstr_val (spe)
+                                                   0.00      0.57 f
+  data arrival time                                          0.57
+
+  max_delay to non-endpoint                        0.33      0.33
+  data required time                                         0.33
+  ------------------------------------------------------------------------
+  data required time                                         0.33
+  data arrival time                                         -0.57
+  ------------------------------------------------------------------------
+  statistical adjustment                           0.00     -0.24
+  slack (VIOLATED)                                          -0.24
+
+
+1
