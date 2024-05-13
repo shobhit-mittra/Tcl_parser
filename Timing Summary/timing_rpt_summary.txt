@@ -1,0 +1,8 @@
+---------------------Timing report summary created at : 13-05-2024 12:03:20---------------------
+Startpoint Path is : u_tile_main/xyz/abc/CP (rising edge-triggered flip-flop clocked by ***)
+Endpoint Path is : u_tile_secondary/123/456/u_spe (internal path endpoint)
+Data Path Delay(in ns) is : 0.57
+Slack(in ns) is : -0.24
+Inverter count is : 5
+Buffer count is : 5
+Logic depth count is : 26
